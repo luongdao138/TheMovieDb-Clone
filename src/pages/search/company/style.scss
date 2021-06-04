@@ -1,0 +1,19 @@
+@import '../../../base.scss';
+.companySearch {
+  border-top: 1px solid #ccc;
+
+  &__name {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-right: 5px;
+  }
+
+  &__country {
+    background-color: $grey-color;
+    display: block;
+    padding: 1px 5px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+  }
+}

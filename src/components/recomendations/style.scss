@@ -1,0 +1,56 @@
+@import '../../base.scss';
+
+.recomendations {
+  margin-top: 30px;
+  color: #000;
+  &__main {
+    display: flex;
+    padding: 10px 0;
+    overflow: auto;
+    &__item {
+      margin-right: 18px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &__thumbnail {
+        position: relative;
+        img {
+          width: 250px;
+          height: 141px;
+          border-radius: 8px;
+        }
+
+        &__actions {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: #fff;
+          opacity: 0.9;
+          height: 35px;
+          font-size: 14px;
+          padding: 0 10px;
+          z-index: 5;
+          .left {
+            display: flex;
+            align-items: center;
+            span {
+              margin-right: 5px;
+            }
+          }
+          .right {
+            span {
+              margin-left: 5px;
+              font-size: 12px;
+              // display: block;
+            }
+          }
+        }
+      }
+      &__info,
+      &:hover p {
+        color: #000;
+      }
+    }
+  }
+}

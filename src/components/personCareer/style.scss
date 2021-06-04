@@ -1,0 +1,91 @@
+@import '../../base.scss';
+
+.personCareer {
+  &__bio {
+    h1 {
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    strong {
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: block;
+      font-size: 20px;
+    }
+    p {
+      line-height: 24px;
+    }
+  }
+  &__knownFor {
+    display: flex;
+    overflow: auto;
+    margin-top: 40px;
+    &__item {
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+      img {
+        width: 130px;
+        border-radius: 8px;
+        max-width: 195px;
+      }
+      p {
+        text-align: center;
+        color: #000;
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 5px;
+        @include line-clamp(2);
+      }
+    }
+  }
+
+  &__achievements {
+    margin-top: 20px;
+    &__item {
+      margin-bottom: 35px;
+
+      &__title {
+        font-weight: 600;
+        font-size: 1.3em;
+      }
+      &__main {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        // padding: 20px;
+        .ac-wrapper {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+
+        .achievementItem {
+          padding: 10px 20px;
+          cursor: pointer;
+          color: #000;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            background-color: rgb(223, 223, 223);
+          }
+          &__label {
+            margin-right: 40px;
+          }
+          &__name {
+            margin-right: 4px;
+          }
+
+          &__espisode {
+            margin-left: 10px;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+}

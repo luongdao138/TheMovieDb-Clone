@@ -1,0 +1,160 @@
+@import '../../base.scss';
+
+.episodeMedia {
+  &__nav {
+    height: 40px;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+    padding: 0 40px;
+    a {
+      color: #000;
+      span.value-left {
+        margin-left: 8px;
+      }
+      span.value-right {
+        margin-right: 8px;
+      }
+    }
+  }
+  &__main {
+    padding: 0 40px;
+
+    &__imagesList {
+      display: grid;
+      padding: 20px 0;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+
+    &__videosList {
+      display: grid;
+      padding: 20px 0;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 20px;
+      row-gap: 20px;
+      &__item {
+        img {
+          width: 100%;
+        }
+        position: relative;
+        .play {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background-color: rgba($color: #000000, $alpha: 0.7);
+          display: flex;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          cursor: pointer;
+          transform: translate(-50%, -50%);
+          span {
+            margin: auto;
+            font-size: 20px;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    &__castList {
+      display: flex;
+      padding: 20px 0;
+      h4 {
+        font-size: 24px;
+        font-weight: 600;
+        & > span {
+          font-weight: 500;
+          opacity: 0.6;
+        }
+        margin-bottom: 15px;
+      }
+      h6 {
+        font-weight: 600;
+        & > span {
+          font-weight: 500;
+          opacity: 0.6;
+        }
+        margin-bottom: 5px;
+        margin-top: 5px;
+      }
+
+      .item {
+        align-items: center;
+        margin-bottom: 12px;
+        img {
+          width: 66px;
+          height: 66px;
+          object-fit: cover;
+          border-radius: 8px;
+          margin-right: 30px;
+        }
+        p {
+          color: #000;
+          font-weight: 700;
+          margin-bottom: -5px;
+          font-size: 16px;
+        }
+        span {
+          color: #000;
+          font-weight: 500;
+          font-size: 15px;
+        }
+      }
+
+      &__left {
+        flex: 1;
+        .creditList {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+        }
+      }
+
+      &__right {
+        flex: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .episodeMedia {
+    &__main {
+      padding: 0 20px;
+      &__videosList {
+        grid-template-columns: 1fr 1fr;
+      }
+      &__imagesList {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .episodeMedia {
+    &__main {
+      &__castList {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .episodeMedia {
+    &__main {
+      padding: 0 20px;
+      &__videossList {
+        grid-template-columns: 1fr;
+      }
+      &__imagesList {
+        grid-template-columns: 1fr;
+      }
+    }
+    &__nav {
+      padding: 0 20px;
+    }
+  }
+}

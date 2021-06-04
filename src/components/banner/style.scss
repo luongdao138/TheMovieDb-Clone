@@ -1,0 +1,112 @@
+@import '../../base.scss';
+
+.banner {
+  min-height: 300px;
+  background-image: linear-gradient(
+      to right,
+      rgba(3, 37, 65, 0.8) 0%,
+      rgba(3, 37, 65, 0) 100%
+    ),
+    url('https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/ayUMWKe6Wow5ixLlKxxlp7IqTiI.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  &__wrapper {
+    padding: 60px 40px;
+    color: #fff;
+    &__bigtext {
+      font-size: 3em;
+    }
+
+    &__smalltext {
+      font-size: 2em;
+      margin-bottom: 40px;
+    }
+
+    &__search {
+      position: relative;
+      input {
+        height: 46px;
+        width: 100%;
+        border: none;
+        padding: 10px 20px;
+        padding-right: 110px;
+        border-radius: 50px;
+        font-size: 16px;
+      }
+      button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        width: 100px;
+        background: linear-gradient(
+          to right,
+          rgba(30, 213, 169, 1) 0%,
+          rgba(1, 180, 228, 1) 100%
+        );
+        border-radius: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  .banner {
+    &__wrapper {
+      padding: 30px 20px;
+      color: #fff;
+      &__bigtext {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+
+      &__smalltext {
+        font-size: 1.5em;
+        margin-bottom: 40px;
+      }
+
+      &__search {
+        input {
+          font-size: 14px;
+          padding-right: 85px;
+        }
+        button {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .banner {
+    &__wrapper {
+      padding: 30px 20px;
+      color: #fff;
+      &__bigtext {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      &__smalltext {
+        font-size: 1em;
+        margin-bottom: 40px;
+      }
+
+      &__search {
+        input {
+          font-size: 14px;
+          padding-right: 85px;
+        }
+        button {
+          font-size: 14px;
+          width: 80px;
+        }
+      }
+    }
+  }
+}

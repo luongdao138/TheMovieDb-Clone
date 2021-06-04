@@ -1,0 +1,15 @@
+@import '../../base.scss';
+.video-iframe {
+  min-width: 60vw;
+}
+
+@media (max-width: $breakpoint-medium) {
+  .video-iframe {
+    min-width: 80vw;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .video-iframe {
+  }
+}

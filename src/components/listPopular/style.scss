@@ -1,0 +1,52 @@
+@import '../../base.scss';
+
+.listPopular {
+  padding: 30px 40px;
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    h2 {
+      font-weight: 700;
+      margin-right: 20px;
+    }
+
+    div {
+      // border: 1px solid black;
+      border: none !important;
+      padding: 0 !important;
+      span {
+        border-radius: 50px;
+        padding: 10px;
+        cursor: pointer;
+        &.active {
+          background-color: $primary-color;
+          color: #1ed5a9;
+        }
+      }
+    }
+  }
+  &__main {
+    display: flex;
+    overflow: auto;
+
+    &__item {
+      padding: 8px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .listPopular {
+    padding: 30px 20px;
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      h2 {
+        font-size: 22px;
+        margin: 20px 0;
+        margin-right: 20px;
+      }
+    }
+  }
+}

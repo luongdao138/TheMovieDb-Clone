@@ -1,0 +1,64 @@
+@import '../../base.scss';
+
+.seasonOverview {
+  margin: 10px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba($color: #000000, $alpha: 0.1);
+  &.season_page {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 15px 40px;
+    img {
+      width: 100px;
+      height: 150px;
+      border-radius: 8px;
+      margin-right: 20px;
+    }
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  &__thumbnail {
+    img {
+      width: 130px;
+      height: 195px;
+      min-height: 100%;
+    }
+  }
+
+  &__info {
+    padding: 15px;
+    h5 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    strong {
+      margin-bottom: 20px;
+      display: block;
+    }
+    p {
+      @include line-clamp(4);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .seasonOverview {
+    &.season_page {
+      padding: 15px 20px;
+      img {
+        width: 100px;
+        height: 100%;
+        // height: 50px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 0px;
+      }
+    }
+    &__info {
+      p {
+        @include line-clamp(2);
+      }
+    }
+  }
+}

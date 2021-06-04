@@ -1,0 +1,88 @@
+@import '../../base.scss';
+
+.detailHeader {
+  background-color: #231e26;
+  display: flex;
+  align-items: center;
+  padding: 15px 40px;
+
+  &__thumbnail {
+    img {
+      max-width: 160px;
+      border-radius: 4px;
+      max-height: 100px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+    margin-right: 20px;
+  }
+
+  &__info {
+    h1 {
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+      font-weight: 700;
+      font-size: 2rem;
+      &:hover {
+        opacity: 0.8;
+      }
+      span {
+        opacity: 0.8;
+        font-weight: 500;
+      }
+      margin-bottom: 0px;
+    }
+    a {
+      color: rgba($color: #fff, $alpha: 0.6);
+      font-size: 18px;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+      span {
+        margin-left: 3px;
+      }
+      &:hover {
+        color: rgba($color: #fff, $alpha: 0.4);
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-medium) {
+  .detailHeader {
+    &__thumbnail {
+      margin-right: 10px;
+      img {
+        width: 120px;
+        border-radius: 4px;
+      }
+    }
+    &__info {
+      h1 {
+        font-size: 24px;
+      }
+      a {
+        font-size: 14 px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .detailHeader {
+    padding: 10px 20px;
+    &__thumbnail {
+      img {
+        width: 100px;
+        border-radius: 4px;
+      }
+    }
+    &__info {
+      h1 {
+        font-size: 20px;
+      }
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../../base.scss';
+
+.movieSearch {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  & > img {
+    min-width: 94px;
+    width: 94px;
+    height: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__info {
+    padding: 15px 0;
+    justify-content: space-around;
+
+    h3 {
+      font-size: 1.1em;
+      font-weight: 600;
+      color: #474747;
+      margin-bottom: 5px;
+      line-height: 1.2em;
+    }
+    span {
+      white-space: nowrap;
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    p {
+      @include line-clamp(2);
+      margin: 0;
+      font-size: 14px;
+      letter-spacing: 0.5;
+      color: #474747;
+      font-weight: 500;
+      word-spacing: 0.5px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .movieSearch {
+    &__info {
+      justify-content: center;
+      h3 {
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+
+      p {
+        display: none;
+        &.keyword {
+          display: -webkit-box;
+          @include line-clamp(2);
+        }
+      }
+    }
+  }
+}

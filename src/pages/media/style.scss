@@ -1,0 +1,16 @@
+@import '../../base.scss';
+
+.mediaPage {
+  &__main {
+    padding: 0 40px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .mediaPage {
+    &__main {
+      padding: 0 20px;
+    }
+  }
+}

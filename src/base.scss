@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primary-color: #032541;
+$secondary-color: #01b4e4;
+$text-color: #000;
+$text-secondary: rgba(0, 0, 0, 0.6);
+$grey-color: #dbdbdb;
+$breakpoint-small: 520px;
+$breakpoint-medium: 1224px;
+
+body {
+  background-attachment: fixed;
+  color: $text-color;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+input {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin line-clamp($number) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $grey-color;
+  border-radius: 15px;
+}

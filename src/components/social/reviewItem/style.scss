@@ -1,0 +1,104 @@
+@import '../../../base.scss';
+
+.reviewItem {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba($color: #000, $alpha: 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  &__logo {
+    margin-right: 20px;
+    img {
+      width: 64px;
+      height: 64px;
+      border-radius: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__info {
+    &__title {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      & > span {
+        font-weight: 500;
+        background-color: #000;
+        color: #fff;
+        display: flex;
+        margin-left: 18px;
+        align-items: center;
+        padding: 4px 10px;
+        border-radius: 5px;
+        span {
+          &:first-child {
+            font-size: 10px;
+          }
+          font-size: 14px;
+          margin: 0 2px;
+        }
+      }
+    }
+
+    &__time {
+      font-weight: 300;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      font-size: 15px;
+      @include line-clamp(5);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .reviewItem {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba($color: #000, $alpha: 0.1);
+    padding: 10px;
+    margin-bottom: 20px;
+    &__logo {
+      margin-right: 5px;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__info {
+      &__title {
+        font-size: 16px !important;
+        flex-direction: column;
+        align-items: flex-start;
+        & > span {
+          margin-left: 0px;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          padding: 2px 5px;
+          span {
+            &:first-child {
+              font-size: 10px;
+              transform: translateY(-1px);
+            }
+            font-size: 12px;
+          }
+        }
+      }
+
+      &__time {
+        font-weight: 300;
+        font-size: 12px;
+        white-space: pre-line;
+        margin-bottom: 10px;
+      }
+
+      &__content {
+        font-size: 15px;
+        @include line-clamp(3);
+      }
+    }
+  }
+}

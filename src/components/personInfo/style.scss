@@ -1,0 +1,47 @@
+@import '../../base.scss';
+
+.personInfo {
+  margin-right: 20px;
+  img {
+    max-width: 100%;
+    height: 450px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+
+  .person__name {
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 24px;
+    display: none;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__main {
+    &__item {
+      &__title {
+        font-weight: 600;
+      }
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .personInfo {
+    margin-right: 0;
+    &__img {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    .person__name {
+      display: block;
+    }
+  }
+}

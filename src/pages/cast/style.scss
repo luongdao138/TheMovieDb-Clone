@@ -1,0 +1,40 @@
+@import '../../base.scss';
+
+.castPage {
+  &__main {
+    padding: 0 40px;
+    margin-top: 30px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    span {
+      font-weight: 500;
+      opacity: 0.6;
+    }
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    align-items: center;
+    margin-bottom: 12px;
+    img {
+      width: 66px;
+      height: 66px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-right: 30px;
+    }
+    p {
+      color: #000;
+      font-weight: 700;
+      margin-bottom: -5px;
+    }
+    span {
+      color: #000;
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+}

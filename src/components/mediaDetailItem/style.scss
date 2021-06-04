@@ -1,0 +1,78 @@
+@import '../../base.scss';
+
+.mediaItem {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba($color: #000000, $alpha: 0.1);
+  border-radius: 8px;
+  margin: 0 10px;
+  margin-bottom: 20px;
+  &__thumbnail {
+    position: relative;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    &__actions {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 50px;
+      padding: 0 20px;
+      color: #000;
+      transition: all 0.3s ease-in-out;
+      opacity: 0;
+      visibility: visible;
+
+      background-color: rgba($color: #fff, $alpha: 0.8);
+      span {
+        cursor: pointer;
+      }
+      z-index: 2;
+    }
+    &:hover &__actions {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__main {
+    padding: 10px;
+    &__item {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      display: flex;
+      flex-direction: column;
+      .title {
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      .value {
+        color: #000;
+      }
+
+      .language {
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 8px;
+        align-items: center;
+        background-color: #eeeff2;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #878c92;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .mediaItem {
+    margin: 10px 0;
+  }
+}

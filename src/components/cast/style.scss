@@ -1,0 +1,44 @@
+@import '../../base.scss';
+
+.cast {
+  margin-bottom: 25px;
+  &__main {
+    display: flex;
+    // align-items: center;
+    overflow: auto;
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+
+  .viewmore {
+    min-width: 140px;
+    width: 140px;
+    & > a {
+      color: #000;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  }
+
+  &__full {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    &:hover {
+      color: #000;
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .cast {
+    &__main {
+      .viewmore {
+        width: 120px;
+        min-width: 120px;
+      }
+    }
+  }
+}

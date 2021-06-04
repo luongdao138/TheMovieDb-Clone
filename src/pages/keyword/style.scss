@@ -1,0 +1,104 @@
+@import '../../base.scss';
+
+.keywordPage {
+  .wrapper {
+    background-image: radial-gradient(
+      at 30% top,
+      #073844 0%,
+      rgba(var(--tmdbDarkBlue), 1) 70%
+    );
+    background-color: #063143;
+    padding: 0 40px;
+  }
+  &__filter {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+    ul {
+      margin-bottom: 0;
+    }
+    .main-menu {
+      & > li {
+        margin: 0 15px;
+        cursor: pointer;
+        position: relative;
+        span:first-child {
+          margin-right: 2px;
+        }
+        .sub-menu {
+          // display: none;
+          z-index: 3;
+          position: absolute;
+          padding: 10px 0;
+          right: 50%;
+          width: 140px;
+          transition: all 0.3s ease-in-out;
+          opacity: 0;
+          visibility: hidden;
+          border-radius: 8px;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background-color: #fff;
+          transform: translateX(50%);
+          li {
+            padding: 5px 10px;
+            font-size: 14px;
+            transition: all 0.3s ease-in-out;
+            &:hover,
+            &.active {
+              background-color: rgb(223, 220, 220);
+            }
+          }
+        }
+        &:hover .sub-menu {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &__header {
+    background-image: url('https://www.themoviedb.org/assets/2/v4/account_pipes/light_blue-a230b623827400e967c6eb7241d88086f2eb9264c0789d0dab15ae6f1df1421a.svg');
+    height: 70px;
+    width: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center -250px;
+    color: #fff;
+  }
+  &__main {
+    padding: 0 40px;
+    margin-top: 30px;
+    &__loadmore {
+      border-radius: 8px;
+      width: 100%;
+      height: 50px;
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      background-color: $secondary-color;
+      margin: 15px 0 10px 0;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .keywordPage {
+    &__main {
+      padding: 0 20px;
+    }
+    .wrapper {
+      padding: 0 20px;
+    }
+
+    &__header {
+      h2 {
+        text-align: center;
+        font-size: 24px;
+        width: 100%;
+      }
+      h4 {
+        display: none;
+      }
+    }
+  }
+}

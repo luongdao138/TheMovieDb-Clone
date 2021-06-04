@@ -1,0 +1,43 @@
+@import '../../base.scss';
+.leaderBoard {
+  padding: 0 40px;
+  &__alltime {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.9;
+    span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 10px;
+      background: linear-gradient(
+        to right,
+        rgba(192, 254, 207, 1) 0%,
+        rgba(30, 213, 169, 1) 100%
+      );
+    }
+  }
+
+  &__thisweek {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.9;
+    span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(
+        to right,
+        rgba(253, 193, 112, 1) 0%,
+        rgba(217, 59, 99, 1) 100%
+      );
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .leaderBoard {
+    padding: 0 20px;
+  }
+}

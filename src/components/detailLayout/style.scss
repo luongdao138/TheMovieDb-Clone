@@ -1,0 +1,16 @@
+@import '../../base.scss';
+
+.detailNav {
+  &__main {
+    padding: 0 40px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .detailNav {
+    &__main {
+      padding: 0 20px;
+    }
+  }
+}

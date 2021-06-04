@@ -1,0 +1,17 @@
+@import '../../base.scss';
+
+.detailPage {
+  &__bottom,
+  .personWrapper {
+    padding: 10px 40px;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .detailPage {
+    &__bottom,
+    .personWrapper {
+      padding: 10px 20px;
+    }
+  }
+}

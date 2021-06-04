@@ -1,0 +1,52 @@
+.leaderBoardItem {
+  &__left {
+    img {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    margin-right: 10px;
+  }
+
+  &__right {
+    & > * {
+      margin: 0px;
+    }
+    width: 100%;
+    & > a {
+      font-weight: 600;
+      color: #000;
+      font-size: 16px;
+    }
+
+    .span2 {
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .span1 {
+      height: 8px;
+      border-radius: 20px;
+      margin-right: 10px;
+    }
+
+    &__alltime {
+      .span1 {
+        background: linear-gradient(
+          to right,
+          rgba(192, 254, 207, 1) 0%,
+          rgba(30, 213, 169, 1) 100%
+        );
+      }
+    }
+    &__thisweek {
+      .span1 {
+        background: linear-gradient(
+          to right,
+          rgba(253, 193, 112, 1) 0%,
+          rgba(217, 59, 99, 1) 100%
+        );
+      }
+    }
+  }
+}

@@ -57,6 +57,34 @@ export const movieOptions = (id) => [
       },
     ],
   },
+  {
+    label: 'Fandom',
+    isActive: false,
+    options: [
+      {
+        link: '/',
+        title: 'Discussions',
+      },
+      {
+        link: '/',
+        title: 'Reviews',
+      },
+    ],
+  },
+  {
+    label: 'Fandom',
+    isActive: false,
+    options: [
+      {
+        link: '/',
+        title: 'Discussions',
+      },
+      {
+        link: '/',
+        title: 'Reviews',
+      },
+    ],
+  },
 ];
 
 export const tvOptions = (id) => [
